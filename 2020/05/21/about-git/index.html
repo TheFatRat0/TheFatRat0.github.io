@@ -6,12 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | TheFatRat`s blog</title>
+  <title>about git | TheFatRat`s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="TheFatRat&#96;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="本篇文章将介绍有关git的一些容易忘记的操作。（附加hexo命令）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="about git">
+<meta property="og:url" content="http://yoursite.com/2020/05/21/about-git/index.html">
 <meta property="og:site_name" content="TheFatRat&#96;s blog">
+<meta property="og:description" content="本篇文章将介绍有关git的一些容易忘记的操作。（附加hexo命令）">
+<meta property="article:published_time" content="2020-05-21T12:46:04.000Z">
+<meta property="article:modified_time" content="2020-05-21T12:56:29.125Z">
 <meta property="article:author" content="TheFatRat">
 <meta name="twitter:card" content="summary">
   
@@ -149,130 +153,167 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-about-git" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      about git
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/21/about-git/" class="archive-article-date">
+
+        
+        <a href="/2020/05/21/about-git/" class="archive-article-date">
   	<time datetime="2020-05-21T12:46:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/21/about-git/">about git</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本篇文章将介绍有关git的一些容易忘记的操作。（附加hexo命令）</p>
+<a id="more"></a>
+<p>已经好久没有更新blog了，但确实是这个月特别忙特别忙。<br>言归正传，这篇文章将讲诉一些有关git的常规操作，而这些操作我有时候又会忘记。</p>
+<h3 id="github上更新项目"><a href="#github上更新项目" class="headerlink" title="github上更新项目"></a>github上更新项目</h3><p>主要分为以下四个步骤：<br>git status<br>git add .<br>git commit -m “本次更新的说明”<br>git push origin master # 将本地主分支推到远程主分支</p>
+<h3 id="在linux上更新项目"><a href="#在linux上更新项目" class="headerlink" title="在linux上更新项目"></a>在linux上更新项目</h3><p>代码和上面一致，只不过要注意，如果用的是虚拟机，那么用Xshell上传会报错，而且报错内容很奇怪，最好还是在主机上直接上传会更好一些。</p>
+<h3 id="查看git日志"><a href="#查看git日志" class="headerlink" title="查看git日志"></a>查看git日志</h3><p>可以充分利用git log来查看日志。</p>
+<p>接下来要简单说一下关于hexo的有关操作了。。</p>
+<h3 id="hexo操作"><a href="#hexo操作" class="headerlink" title="hexo操作"></a>hexo操作</h3><pre><code>hexo new [layout] &lt;title&gt;
+hexo s[erver]
+hexo clean
+hexo generate
+hexo deploy</code></pre><p>其中 hexo new表示新建一篇博客。<br>hexo server表示在本地预览。<br>hexo clean清除了我之前生成的东西，也可以不加。<br>hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写。<br>hexo deploy 部署文章，可以用hexo d缩写。</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>您的支持将鼓励我继续创作! <i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/21/about-git/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/19/SQL/" class="archive-article-date">
-  	<time datetime="2020-04-19T03:07:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/19/SQL/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SQL</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/19/SQL/">SQL</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/04/GrayPicture/" class="archive-article-date">
-  	<time datetime="2020-04-04T09:22:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/04/GrayPicture/">Gray Picture</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/27/hello-blog/" class="archive-article-date">
-  	<time datetime="2020-03-27T11:00:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/27/hello-blog/">Hello Blog</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -295,8 +336,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
