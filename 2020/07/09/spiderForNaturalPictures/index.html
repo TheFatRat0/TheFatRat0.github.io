@@ -16,9 +16,9 @@
 <meta property="og:description" content="这篇文章将主要介绍利用爬虫爬取网络资源的一些知识。">
 <meta property="og:image" content="http://yoursite.com/2020/07/09/spiderForNaturalPictures/picture1.png">
 <meta property="og:image" content="http://yoursite.com/2020/07/09/spiderForNaturalPictures/picture2.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/spiderForNaturalPictures/picture3.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/spiderForNaturalPictures/spiderForNaturalPictures%5Cpicture3.png">
 <meta property="article:published_time" content="2020-07-09T06:56:12.000Z">
-<meta property="article:modified_time" content="2020-07-09T07:51:05.647Z">
+<meta property="article:modified_time" content="2020-07-09T08:02:05.769Z">
 <meta property="article:author" content="TheFatRat">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/07/09/spiderForNaturalPictures/picture1.png">
@@ -199,7 +199,7 @@
 <p>这里有两次循环，第一次代表的是网页每翻一页，其后缀都会由index_i.html变为index_i+1.html，所以可以使用循环让其自动翻页爬取。第二次是找到了图片元素后依次遍历来跳到下一个图片元素。</p>
 <p>soup.find_all里的两个参数都是指元素的源码位置，这里是<div class="il_img" style="opacity: 1;">，所以填div和il_img参数。</div></p>
 <p>感兴趣的小伙伴可以搜搜这里的findImg和findTitle正则代表的意思，这里将不再赘述。</p>
-<p><img src="/2020/07/09/spiderForNaturalPictures/picture3.png" alt></p>
+<p><img src="/2020/07/09/spiderForNaturalPictures/spiderForNaturalPictures%5Cpicture3.png" alt></p>
 <p>这样子，所有的信息就都保存到了datalist中。</p>
 <h3 id="保存数据至excle文件中"><a href="#保存数据至excle文件中" class="headerlink" title="保存数据至excle文件中"></a>保存数据至excle文件中</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">workbook &#x3D; xlwt.Workbook(encoding&#x3D;&quot;utf-8&quot;)</span><br><span class="line">worksheet &#x3D; workbook.add_sheet(&#39;风景图&#39;)</span><br><span class="line">col &#x3D; (&quot;标题&quot;, &quot;链接&quot;)</span><br><span class="line"></span><br><span class="line">def saveData(datalist, savepath):</span><br><span class="line">    for i in range(0, 2):</span><br><span class="line">        worksheet.write(0, i, col[i])</span><br><span class="line">    for i in range(0, 200):</span><br><span class="line">        data &#x3D; datalist[i]</span><br><span class="line">        for j in range(0, 2):</span><br><span class="line">            worksheet.write(i + 1, j, data[j])</span><br><span class="line">    workbook.save(&quot;风景图.xls&quot;)</span><br></pre></td></tr></table></figure>
 
