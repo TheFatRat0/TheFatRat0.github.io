@@ -6,18 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>SQL在服务器上的实战 | TheFatRat`s blog</title>
+  <title>C++复习笔记 | TheFatRat`s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本篇文章主要记录flask服务器修改时需要的操作以及配置到flask服务器上的数据库的相关信息。">
+  <meta name="description" content="整理了重要的C++知识点。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL在服务器上的实战">
-<meta property="og:url" content="http://yoursite.com/2020/10/14/SQL%20in%20flask/index.html">
+<meta property="og:title" content="C++复习笔记">
+<meta property="og:url" content="http://yoursite.com/2021/03/03/C++/index.html">
 <meta property="og:site_name" content="TheFatRat&#96;s blog">
-<meta property="og:description" content="本篇文章主要记录flask服务器修改时需要的操作以及配置到flask服务器上的数据库的相关信息。">
-<meta property="article:published_time" content="2020-10-14T11:39:23.000Z">
-<meta property="article:modified_time" content="2020-12-03T05:47:37.957Z">
+<meta property="og:description" content="整理了重要的C++知识点。">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/1.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/2.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/3.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/4.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/5.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/6.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/image-20210301105506131.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/image-20210226161657755.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/image-20210226165359530.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/image-20210227211957400.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/7.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/03/C++/image-20210303093833374.png">
+<meta property="article:published_time" content="2021-03-03T02:46:04.000Z">
+<meta property="article:modified_time" content="2021-03-03T02:57:06.234Z">
 <meta property="article:author" content="TheFatRat">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2021/03/03/C++/1.png">
   
     <link rel="alternative" href="/atom.xml" title="TheFatRat`s blog" type="application/atom+xml">
   
@@ -153,41 +166,326 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SQL in flask" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-C++" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      SQL在服务器上的实战
+      C++复习笔记
     </h1>
   
 
         
-        <a href="/2020/10/14/SQL%20in%20flask/" class="archive-article-date">
-  	<time datetime="2020-10-14T11:39:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-14</time>
+        <a href="/2021/03/03/C++/" class="archive-article-date">
+  	<time datetime="2021-03-03T02:46:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本篇文章主要记录flask服务器修改时需要的操作以及配置到flask服务器上的数据库的相关信息。</p>
+        <p>整理了重要的C++知识点。</p>
 <a id="more"></a>
 
-<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p>服务器采用uwsgi配置flask。</p>
-<p>IP:39.ooo.ooo.oo<br>账户:oooo<br>密码:ooooooooo</p>
-<p>配置flask：<br><a href="https://www.cnblogs.com/nmsghgnv/p/11431729.html" target="_blank" rel="noopener">https://www.cnblogs.com/nmsghgnv/p/11431729.html</a></p>
-<p>修改flask相关文件：<br>1.进入相关环境<br>#进入虚拟环境<br>cd /home/galaxies/AR/venv<br>source bin/activate<br>2.替换文件<br>3.测试<br>pkill -f -9 uwsgi<br>uwsgi –ini /home/galaxies/AR/uwsgiconfig.ini<br>3.打包并后台运行<br>uwsgi –ini /home/galaxies/AR/uwsgiconfig.ini –daemonize /home/galaxies/AR/AR.out</p>
-<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>账户:**<br>密码:** **</p>
-<p>远程连接数据库参数:<br>主机地址:39.ooo.ooo.oo<br>用户名:oooo<br>密码:oooooo<br>端口:oooo</p>
-<p>安装教程:<a href="https://www.bilibili.com/video/BV164411J761?p=119" target="_blank" rel="noopener">https://www.bilibili.com/video/BV164411J761?p=119</a></p>
-<p>登录:mysql -uroot -poooooo -Poooo -S /var/lib/mysql/mysql.sock</p>
-<p>database:galaxies</p>
-<p>table:<br>user<br>//用于存储用户基本信息<br>//element:<br>//userId:用户id 用于计数用户和区分用户<br>//username:用户账号 用于用户登录,每个用户名限一个账号<br>//password:用户密码 用于用户登录</p>
-<p>CREATE TABLE user(<br>    userId INT PRIMARY KEY,<br>    username VARCHAR(20) UNIQUE,<br>    password VARCHAR(20)<br>);</p>
-<p>INSERT INTO user VALUES(1,’test’,’123456’);</p>
+<h1 id="C-和C的区别"><a href="#C-和C的区别" class="headerlink" title="C++和C的区别"></a>C++和C的区别</h1><h2 id="面向对象与面向过程"><a href="#面向对象与面向过程" class="headerlink" title="面向对象与面向过程"></a>面向对象与面向过程</h2><p>面向过程：将问题分解为一些连串的步骤去逐步实现。</p>
+<p>面向对象：将问题分解为各个对象，通过对象在问题中所做的行为来拼凑解决问题。</p>
+<p>面向过程效率更高，性能更好，所以嵌入式开发这一块对性能要求高的领域常用C语言。</p>
+<p>面向对象具有良好的拓展性和复用性，易于维护。</p>
+<h2 id="封装、继承、多态"><a href="#封装、继承、多态" class="headerlink" title="封装、继承、多态"></a>封装、继承、多态</h2><p>C++有封装继承多态三大特性，能让使用者更好地管理数据和行为。</p>
+<h1 id="指针和引用"><a href="#指针和引用" class="headerlink" title="指针和引用"></a>指针和引用</h1><p>指针是一个实体，而引用本身是别名。</p>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><p>一种变量，用来指向某一变量的存储单元，即存储地址。</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>变量的别名，和初始化时的那个变量是同一个东西。</p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>指针可以在不初始化的情况下直接声明（野指针），引用则不可以，它一定要初始化为一个已有对象的引用。</p>
+<p>指针可以赋值新变量，让其指向新的地址，但是引用不可以，因为编译器会误以为程序希望将引用所指的变量赋值为等号右边的变量。</p>
+<p>如：int a = 1; int b = 2; int *p = &a; p = b;(p指向a到指向b) int &amp;c = a; c = b;(a被赋值为b变量，等价于a=b)。</p>
+<p>指针可通过加减进行偏移操作，引用加减则是造成地址本身所代表的值进行加减。</p>
+<p>指针占四字节，引用占其本身类型大小的字节数。如double型指针占4字节，而double型引用占8字节。</p>
+<p>存在const指针，而不存在const引用。</p>
+<p>作为参数传递时，指针传递的参数需要解引用才可使用，而引用传递的参数修改是对原变量的直接修改（引用传递）。</p>
+<h1 id="数组和指针"><a href="#数组和指针" class="headerlink" title="数组和指针"></a>数组和指针</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>用于存储多个相同类型数据的集合。</p>
+<h2 id="区别-1"><a href="#区别-1" class="headerlink" title="区别"></a>区别</h2><p>指针间接访问数据，即先访问指针存储的地址，再访问该地址保存的数值；数组直接访问数据。</p>
+<p>指针显式地分配与释放内存（delete&amp;malloc），数组隐式地分配和删除内存。</p>
+<p>指针通常用于动态的数据结构，而数组通常用于固定数目的相同类型的元素集合。</p>
+<h1 id="智能指针（smart-pointer）"><a href="#智能指针（smart-pointer）" class="headerlink" title="智能指针（smart pointer）"></a>智能指针（smart pointer）</h1><p>智能指针存在的原理：普通指针使用的时候一般会有如下风险：在使用完此指针的时候忘记释放内存，导致了内存泄漏等问题。智能指针可以很大程度地避免这个问题。因为智能指针本质上是一个类，在类被使用完的时候会自动调用析构函数来释放内存，不会有内存泄漏的那些问题，相对更为安全。</p>
+<h2 id="auto-ptr"><a href="#auto-ptr" class="headerlink" title="auto_ptr"></a>auto_ptr</h2><p>具有垃圾回收机制，auto_ptr拥有内部指针的所有权，当自身被释放时，其拥有的那个指针会跟着一起释放。</p>
+<p>注意：auto_ptr在C++11中被弃用。</p>
+<p>auto_ptr在被拷贝赋值的时候，原有的对象会被释放，所有权交给了被赋值的那个对象。比如a=b，原有的对象b被释放成了nullptr，a有了之前b的所有权。</p>
+<p>这种情况出现在参数值传递的时候非常致命，因为值传递本身是拷贝复制一个对象的，复制后原有的这个对象就变成了nullptr，之后再也无法使用了。</p>
+<h2 id="unique-ptr"><a href="#unique-ptr" class="headerlink" title="unique_ptr"></a>unique_ptr</h2><p>unique_ptr与auto_ptr大同小异，但是并没有等号运算符重载和拷贝构造，这就不会出现auto_ptr中所有权转移的相关问题。</p>
+<p>多了一个move方法，显式地将本指针转移到其它指针上，并且本指针成为nullptr。</p>
+<p>但是依然会出现使用之后因为成为nullptr而无法被调用的情况。</p>
+<h2 id="shared-ptr"><a href="#shared-ptr" class="headerlink" title="shared_ptr"></a>shared_ptr</h2><p>带引用计数的智能指针。</p>
+<p>当一个智能指针被赋值到另一个智能指针时，指针引用次数就会加1，出了相对应的作用域后，引用计数的值就会相对减少。</p>
+<p>真正的指针会在最后一个引用后被销毁。</p>
+<p><img src="/2021/03/03/C++/1.png" alt="image-20210227103842113"></p>
+<p>用同一个指针来初始化两个shared_ptr指针会出错，因为两个智能指针都会误认为是1次引用次数，那么如果其中一个智能指针出了它的作用域时，会把原来的那个指针给释放，但是另一个智能指针仍然没有出作用域，这就会导致另一个智能指针出错。</p>
+<p><img src="/2021/03/03/C++/2.png" alt="image-20210227103712100"></p>
+<h2 id="weak-ptr"><a href="#weak-ptr" class="headerlink" title="weak_ptr"></a>weak_ptr</h2><p>为了避免循环引用的问题而存在的智能指针。</p>
+<p>当两个类里面同时出现引用对方的类中的智能指针的时候，就会出现循环引用智能指针的情况。当双方指针出作用域的时候，应该两者都一起被析构释放掉，但由于两者循环引用，所以会出现析构异常，它们都没法正常析构。</p>
+<p>为了打破循环闭环，将其中任意一个强指针变为弱指针，就可以将资源成功释放。他的构造与析构不会造成引用次数的增加与减少。</p>
+<p>简单来说，weak_ptr就是为了避免循环引用出现的死锁问题而存在的。</p>
+<h1 id="static"><a href="#static" class="headerlink" title="static"></a>static</h1><h2 id="static的引入"><a href="#static的引入" class="headerlink" title="static的引入"></a>static的引入</h2><p>C++在每次为普通变量分配空间时，都是采用栈式分配空间的，这很好地解决了函数调用结束时可以直接销毁局部变量的空间的问题，但是有些变量需要存储当前值并且等待下一次调用，也就是说调用的次数不止一次，那么就需要一个长期存储变量的空间。由此引用了全局变量。但是全局变量有一个问题，就是它的封装性是特别差的，不仅仅适用于这一个类或函数，其它函数或者类也可以控制使用，所以引用了static关键字来修饰静态数据，使其为整个类服务，不破坏封装性的同时又能被多次调用。</p>
+<h2 id="静态数据的存储"><a href="#静态数据的存储" class="headerlink" title="静态数据的存储"></a>静态数据的存储</h2><p>静态数据成员被存储在类空间的公共区域，这样每个对象访问到的这个变量的值始终是一致的。当然这个变量可以被修改，修改后所有成员访问的此变量会一并更新，也提高了效率。</p>
+<p>静态局部变量只被初始化一次，并在程序结束后被释放。</p>
+<h2 id="静态全局变量"><a href="#静态全局变量" class="headerlink" title="静态全局变量"></a>静态全局变量</h2><p>静态全局变量被分配到全局数据区，没有初始化的变量被自动初始化成0，在整个文件中被视为可见的状态，在其它文件中不可见。</p>
+<p>静态全局变量和全局变量的最大的区别就在于全局变量可以加extern修饰词被其它文件使用，而静态全局变量一定只能在本文件作用域中被使用，其它文件即使加了extern也不行（封装性）。</p>
+<h2 id="静态局部变量"><a href="#静态局部变量" class="headerlink" title="静态局部变量"></a>静态局部变量</h2><p>静态局部变量被存储在全局数据区，但作用在局部作用域，会被初始化一次，之后的调用均不需要初始化默认初始化为0；随着程序结束而被销毁。</p>
+<p>普通变量（自动变量）被存储在栈区，而静态变量被存储在全局区。</p>
+<h2 id="static用法"><a href="#static用法" class="headerlink" title="static用法"></a>static用法</h2><p>不能通过类名来调用非静态成员函数。</p>
+<p>静态成员函数不能调用非静态成员函数以及非静态成员变量。</p>
+<p>非静态成员函数可以访问一切变量及函数。</p>
+<p>（这样理解：静态成员函数因为需要提前分配空间，所以里面的非静态变量以及函数需要提前被放入，与实际上它们的空间是临时储存的，并没有在之前被初始化而出现矛盾）</p>
+<p>由于非静态资源是在初始化对象后才产生的，对于类初始化时就加载的静态方法来说肯定是不认识的。</p>
+<h1 id="const"><a href="#const" class="headerlink" title="const"></a>const</h1><p>用来限定一个变量是只读变量，即只能在不被修改的前提下进行使用。</p>
+<p>const定义常量：const double pi=3.14;</p>
+<p>const定义指针指向（指向常量的指针）：const double* ptr = &a;(不能通过ptr改变a的值)。</p>
+<p>const定义指针（常量指针）：double* const ptr = &amp;a；(不能修改ptr的指向，即ptr永远指向a)。</p>
+<p>const定义函数：const int sum(int a, int b){}（不能修改返回值）/int sum(const int a, const int b){}（传入的参数不能被修改）/int sum(int a, int b)const{}(函数体内不能修改成员变量)。</p>
+<p>const修饰成员函数的目的就是为了不让成员函数修改成员变量。相当于加了一层保险，让其他人认为在这个函数里修改成员变量是不合法的操作。</p>
+<h2 id="常量被放在内存的位置"><a href="#常量被放在内存的位置" class="headerlink" title="常量被放在内存的位置"></a>常量被放在内存的位置</h2><p>常量字面值放在常量存储区中（常量字符串就放在这里）。</p>
+<p>如果是全局常量，则放在全局/静态存储区的常量存储区中；如果是局部常量，则放在栈式存储区的常量存储区中。</p>
+<p>这就很好地解释了char *p = “132”;为什么※p不能被修改。因为p指向的是一个字面值，也就是在常量区的一个常量，它不能被修改，只能读。</p>
+<h2 id="仅由const区分的两个函数，是否可行？"><a href="#仅由const区分的两个函数，是否可行？" class="headerlink" title="仅由const区分的两个函数，是否可行？"></a>仅由const区分的两个函数，是否可行？</h2><p>如果是顶层const，即在返回类型前加const，那么会出现无法重载的情况，编译器会认为仅凭返回类型区分的两个函数无法重载（详见重载、重写和覆盖）。</p>
+<p>如果是底层const，即使成员函数变为常成员函数，那么此两个函数会被认为是重载，这是可行的。如果是普通对象调用函数的话，会默认调用没有const的函数，而如果是常对象访问函数，那么因其特性，只能访问const函数，所以会调用有const修饰的函数。</p>
+<h1 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h1><p>用于声明全局变量的关键字。</p>
+<p>如果这个全局变量在此文件中被extern声明（注意：不带static），那么在另一个文件中也可以访问到这个全局变量。</p>
+<p>注意：函数默认是extern的，所以可以不加extern在函数前。</p>
+<p>全局变量的声明需要加extern关键字，但是如果全局变量被定义，可以不需要。但是要注意的是，声明可以多次，但是定义只可以一次。</p>
+<h2 id="声明与定义的区别"><a href="#声明与定义的区别" class="headerlink" title="声明与定义的区别"></a>声明与定义的区别</h2><p>声明是指指出了变量的类型，知道了它应该被存储在哪个位置。</p>
+<p>定义是指在指出变量类型的同时分配了内存空间。</p>
+<p>被extern修饰的变量因为没有给它分配内存空间，所以只是声明（extern告诉编译器它在其他地方被定义了）如extern int val；其它都是定义，如int val；如果extern的变量后面指定了初始值，如extern int val = 1，那么也算作定义。</p>
+<h1 id="include"><a href="#include" class="headerlink" title="include"></a>include</h1><p>include&lt;&gt;和include””之间的差别就在于：后者首先是在当前目录下寻找头文件，如果找到了则屏蔽标准库里的同名的头文件，如果没有找到那么就按照前者的方式去寻找头文件。而前者是默认在标准库中寻找头文件的。</p>
+<h1 id="malloc"><a href="#malloc" class="headerlink" title="malloc"></a>malloc</h1><p>一种动态分配空间的策略。</p>
+<h2 id="实现方案"><a href="#实现方案" class="headerlink" title="实现方案"></a>实现方案</h2><p>malloc函数实际上是一条连接了可用的内存块的空闲链表。</p>
+<p>在申请空间的时候，malloc会沿着链表找到一块空间给用户，开辟完这段空间后会产生剩下的空间，这段剩下的空间会返回到链表中等待下次使用。如果有空间被释放，那么会添加到这块链表中。到了最后只剩下一些很小的空间块，如果此时用户再申请一段大的空间块的话，malloc会检查各个内存片段，查看是否可以进行内存整理，将相邻的空闲块拼接成大的空闲块给用户使用。</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>首先要知道动态空间指的是堆和栈这样的空间，它的内存分配如图：</p>
+<p><img src="/2021/03/03/C++/3.png" alt="image-20210302205720130"></p>
+<p>malloc就是在这块动态内存中分配空间的函数，有两种分配策略：</p>
+<p>1.brk分配内存（需要分配的空间小于128k）。</p>
+<p>在这种情况下，数据段最高地址的指针_edata向高地址推一段距离(注意，这个时候分配的是虚拟地址空间，不存在映射关系，并没有真正地给物理空间，所以如果之后没有进行读写操作的话，也被当作是没有开辟物理空间。只有在进行读写类似的操作的时候，系统内核发生缺页中断，这个时候才会真正地去分配物理内存，然后虚拟内存建立映射关系)。进程调用这段空间的时候，产生缺页中断了，就有了映射关系了。如下图，本身推动指针向下移30k只是做了虚拟内存的分配，而并没有映射（通俗来讲就是没有A的真实空间）。当第一次读写A的时候，才真正分配了物理内存。</p>
+<p><img src="/2021/03/03/C++/4.png" alt="image-20210302210330089"></p>
+<p>2.mmp分配内存（需要分配的空间大于128k）。</p>
+<p>malloc会选择在一段空闲空间分配内存（同样的，刚开始只是开辟虚拟内存，读写发生中断后才分配物理内存）。如下图：</p>
+<p><img src="/2021/03/03/C++/5.png" alt="image-20210302210801682"></p>
+<p>为什么会有这两种不同的分配方式？主要还是因为在销毁空间的时候有更好的区别。</p>
+<p>brk分配策略主要是小的内存分配，在先进行中间的一部分内存（如图中的B）的释放后并没有真正地释放，也不能马上移动e_data指针，因为如果再次有40k的内存申请，可以进行重用。一般是在空闲内存超过128k的时候才会进行内存紧缩操作：</p>
+<p><img src="/2021/03/03/C++/6.png" alt="image-20210302211005551"></p>
+<p>而对于中间的采用mmp策略的内存来说，是可以单独释放的。</p>
+<h1 id="new-delete"><a href="#new-delete" class="headerlink" title="new/delete"></a>new/delete</h1><p>new和delete都是C++的关键字，都是在堆式存储空间里进行操作（即分配空间和释放空间）。</p>
+<h2 id="new-delete和malloc-free的区别"><a href="#new-delete和malloc-free的区别" class="headerlink" title="new/delete和malloc/free的区别"></a>new/delete和malloc/free的区别</h2><p>前者是C++的关键字，而后者是C语言的库函数。</p>
+<p>用前者可以保证对象的申请和释放会调用构造函数和析构函数来进行处理，而后者只是做到了分配空间和释放空间的作用，并不会调用构造函数和析构函数来处理对象。</p>
+<h2 id="new-delete-1"><a href="#new-delete-1" class="headerlink" title="new[]/delete[]"></a>new[]/delete[]</h2><p>在用这个关键字进行创建数组和删除数组的时候，要注意加上[]。</p>
+<p>在用new[]来创建数组的时候，在这个数组的内存前会添加数组长度的值。在用delete[]删除数组的时候，真正的起点是指向数组长度的地址，此地址告诉编译器需要删除多少个对象，以完成数组的真正删除。</p>
+<p><img src="/2021/03/03/C++/image-20210301105506131.png" alt="image-20210301105506131"></p>
+<p>所以如果只是delete pstu的话，会出现删除528地址的情况，会造成报错。需要delete []pstu。</p>
+<p>所以new[]和delete[]需要配套使用。</p>
+<h1 id="cast"><a href="#cast" class="headerlink" title="cast"></a>cast</h1><p>有些时候直接使用强制转换，编译器编译的时候会通过，但实际上在运行的时候会出现报错，这就是强制转换的风险问题，比如说将整型数值转换为指针，或者是基类指针转换为派生类指针的时候（前者可能由于整型代表的存储位置并不能被编译器访问到而失败，后者可能由于派生类的成员更多而导致指针越界访问）。所以C++规范了强制转换方式，让编译器更能帮助排查问题。</p>
+<h2 id="const-cast"><a href="#const-cast" class="headerlink" title="const_cast"></a>const_cast</h2><p>可以利用const_cast来去除const属性。原本的const对象会经过这次强转变得可被改变（注意，只用于指针、引用以及this指针）。</p>
+<p><img src="/2021/03/03/C++/image-20210226161657755.png" alt="image-20210226161657755"></p>
+<p>如图，原本为常量的n在经过const_cast强转后可被改为新值123和456。同样的const_cast也可作用于常成员函数中。</p>
+<h2 id="static-cast"><a href="#static-cast" class="headerlink" title="static_cast"></a>static_cast</h2><p>static_cast主要用于一般的隐式转换（如整型与浮点型之间的转换）以及基类与派生类的转换。</p>
+<p>其实没有这个关键字也依然可以直接让编译器进行隐式转换，但为了让程序更显而易见地被他人发现这里发生了强转，所以添加该关键字以起强调作用。</p>
+<p>通常而言，子类转父类是安全的，因为子类的属性比父类更多，并不会发生转换时指针越界访问的情况。父类转子类可以通过这个关键字来强转，但是仍然不安全（仍然会越界），这是需要注意的。</p>
+<h2 id="dynamic-cast"><a href="#dynamic-cast" class="headerlink" title="dynamic_cast"></a>dynamic_cast</h2><p>用于含有虚函数的基类和派生类之间的指针或者引用的转换。因其会产生额外的开销，所以非必要时候最好不要用。</p>
+<p>它主要在运行的时候检测这个转换后的引用/指针是否会发生越界。如果越界，那么就会将指针置为空，通过这种方式可以加if(pointer==NULL)来检测是否安全。（如果是子类转换为父类，即向上转换，则是安全的，此时会返回正常的指针。当然这种情况下就不需要使用这个方式了，因为会产生额外的开销）。</p>
+<p>它的运行检测机制与RTTI有关。</p>
+<p>总结：具有多态类型的向下转换可使用这种转换。</p>
+<h3 id="RTTI"><a href="#RTTI" class="headerlink" title="RTTI"></a>RTTI</h3><p>一种在运行时的异常处理机制。</p>
+<p>因为这项技术依赖虚表，所以dynamic cast一定要是有虚函数的对象转换才能实现强转。</p>
+<p>type_info是这项技术里的一个类，它会存储在虚函数表的-1位置，dynamic_cast通过查询这个类来判断转换的两者关系，以判断是否异常。</p>
+<h2 id="reinterpret-cast"><a href="#reinterpret-cast" class="headerlink" title="reinterpret_cast"></a>reinterpret_cast</h2><p>等价于显式强转，后果自负。</p>
+<p><img src="/2021/03/03/C++/image-20210226165359530.png" alt="image-20210226165359530"></p>
+<p>可以适用于各种高危险转换方式。不存在检查，直接把原数据放到现内存里。</p>
+<h1 id="左值和右值"><a href="#左值和右值" class="headerlink" title="左值和右值"></a>左值和右值</h1><p>可以这样理解：左值是对象本身，代表一个内存地址值，而右值指的是该对象的值。</p>
+<p>即：左值是对象的内存值，右值是对象的数据值。左值可以寻址，右值不可以。</p>
+<p>变量通常都是左值，所以可以用右值来赋值给左值，右值并不可以被赋值。</p>
+<h2 id="左值引用"><a href="#左值引用" class="headerlink" title="左值引用"></a>左值引用</h2><p>左值引用就是平常我们说的引用。</p>
+<p>可以取地址的，有名字的就是左值。</p>
+<h2 id="右值引用"><a href="#右值引用" class="headerlink" title="右值引用"></a>右值引用</h2><p>不可以取地址的，没有名字的就是右值。</p>
+<p>通过&amp;&amp;来创建一个右值引用，要注意的是右值引用被用来绑定到一个即将销毁的对象上，比如</p>
+<p>int &amp;&amp;r2=i<em>42; *//正确，将rr2绑定到乘法结果上</em></p>
+<p>这里的i*42就是创建的临时对象，马上就要销毁，所以可以用来作右值引用。</p>
+<p>右值引用可以消除不必要的拷贝操作，提升效率。</p>
+<h3 id="转移语义"><a href="#转移语义" class="headerlink" title="转移语义"></a>转移语义</h3><p>将一个对象转换到另一个对象中去。</p>
+<p>一般的转换是开辟空间设定一个新的临时中间者进行传递转换，但是这就产生了不必要的拷贝空间。</p>
+<p>类比于拷贝操作和剪切操作，通常情况下剪切比拷贝所需的时间要短得多。</p>
+<p>一般拷贝复制对象的时候，要进行临时对象的构造和析构，再进行新对象的构造，大大消耗了时间。如果可以直接使用这个临时对象的资源，而不需要再次进行拷贝操作，那么就可以提升效率，也能节省资源申请。所以右值引用可以用来进行转移语义。</p>
+<h3 id="完美转发"><a href="#完美转发" class="headerlink" title="完美转发"></a>完美转发</h3><p>不改变参数类型的情况下传递给另一个函数。即将实参完美地传递给形参。</p>
+<p>如果这个转发函数取得的参数类型是左值对象，那么传递的就是左值对象；如果是右值对象，那么传递的就是右值对象。</p>
+<h1 id="Lambda"><a href="#Lambda" class="headerlink" title="Lambda"></a>Lambda</h1><p>匿名定义目标函数，就地取材地完成一个功能闭包。不需要额外再写一个函数或者函数对象，写程序的方式更为直接（是一种局部函数）。</p>
+<p>lambda表达式：[ caputrue ] ( params ) opt -&gt; ret { body; };</p>
+<h1 id="i与i"><a href="#i与i" class="headerlink" title="++i与i++"></a>++i与i++</h1><h2 id="i"><a href="#i" class="headerlink" title="++i"></a>++i</h2><p>先自增，再返回i。</p>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int&amp; int::operator++()&#123;</span><br><span class="line">	*this+&#x3D;1;</span><br><span class="line">	return *this;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="i-1"><a href="#i-1" class="headerlink" title="i++"></a>i++</h2><p>先返回i，再自增。</p>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const int int::operator++(int)&#123;</span><br><span class="line">	int oldValue &#x3D; *this;</span><br><span class="line">	*this+&#x3D;1;</span><br><span class="line">	return oldValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="main执行前先执行语句"><a href="#main执行前先执行语句" class="headerlink" title="main执行前先执行语句"></a>main执行前先执行语句</h1><p>1.全局对象的构造</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class A&#123;</span><br><span class="line">public:</span><br><span class="line">	A()&#123;</span><br><span class="line">		cout&lt;&lt;&quot;A contribute&quot;&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line">A test;</span><br><span class="line">int main()&#123;</span><br><span class="line">	cout&lt;&lt;&quot;main&quot;&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.attribute关键字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">__attribute((constructor)) void before()&#123;</span><br><span class="line">	printf(&quot;before main\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="函数指针与回调函数"><a href="#函数指针与回调函数" class="headerlink" title="函数指针与回调函数"></a>函数指针与回调函数</h1><h2 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h2><p>见名知其意，函数指针指的就是指向函数的指针。</p>
+<p>形式：int (*ptr)(int,int)；（ptr即为此指针的名称，后面为指向的函数的参数列表，前面的为指向函数的返回类型）。</p>
+<p>int sum(int a, int b){return a+b;}</p>
+<p>ptr = sum即为赋值操作。</p>
+<p>和其他类型变量一样，这个函数指针仍可以作为其他函数的参数进行传入，这样就可以通过该指针传入不同的函数了</p>
+<h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><p>函数指针可以作为其他函数的参数进行传入，这样就可以通过该指针传入不同的函数了，通过该函数指针调入的函数就被称作回调函数。</p>
+<p>在以函数指针作为参数的函数中，使用该函数指针来调用指针指向的函数的过程，称为回调过程。</p>
+<h2 id="回调过程与普通的函数调用过程的区别"><a href="#回调过程与普通的函数调用过程的区别" class="headerlink" title="回调过程与普通的函数调用过程的区别"></a>回调过程与普通的函数调用过程的区别</h2><p>普通函数调用实际上是确定的，无法更改的调用，而回调过程则是可以根据自己的需要传入不同的函数来进行调用。就比如上面的例子，在某一函数中添加ptr作为参数，要调用sum时就传入sum，要调用difference时就调用difference，这比普通的函数调用要更为灵活。</p>
+<p><img src="/2021/03/03/C++/image-20210227211957400.png" alt="image-20210227211957400"></p>
+<h1 id="类"><a href="#类" class="headerlink" title="类"></a>类</h1><h2 id="struct和class的区别"><a href="#struct和class的区别" class="headerlink" title="struct和class的区别"></a>struct和class的区别</h2><p>struct和class都可以用作定义类，但是struct定义类时默认的访问权限是public，而class默认是private。</p>
+<h2 id="类成员的访问权限"><a href="#类成员的访问权限" class="headerlink" title="类成员的访问权限"></a>类成员的访问权限</h2><p>类成员的访问权限可以分为public、private和protected。</p>
+<p>public被称为公共权限，类内和类外都可以访问。</p>
+<p>protected被称为保护权限，类内和其衍生类可以访问，类外不可以访问。</p>
+<p>private被称为私有权限，类内可以访问，类外不可以访问。</p>
+<p>注意：友元函数都可以访问上面的三个权限的类（无论是友元类的成员函数还是友元的全局函数）。</p>
+<h2 id="引用数据成员"><a href="#引用数据成员" class="headerlink" title="引用数据成员"></a>引用数据成员</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class A</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">	A(int &amp;target) :a(target)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; &quot;构造函数&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	void printA()</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; &quot;a is:&quot; &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">private:</span><br><span class="line">	int &amp;a;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>可以，但是一定记住要在初始化列表里初始化此数据成员，同时形参也得是引用形式。</p>
+<h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><h2 id="拷贝构造函数"><a href="#拷贝构造函数" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h2><p>用另一个对象实例来创建一个新的对象实例。</p>
+<p>class Foo { </p>
+<p>public:</p>
+<p>​    Foo();              //默认构造函数    </p>
+<p>​    Foo(const Foo&amp;);     //拷贝构造函数 </p>
+<p>};</p>
+<p>为什么要用引用传递？因为为了避免值传递时带来的不断复制副本产生的无限循环。值传递时，创建一个副本等于作为参数的对象，但是该副本同样需要一个参数进行初始化，即该对象，所以再次调用拷贝构造函数，然后继续循环，无法完成拷贝。</p>
+<h1 id="虚函数与析构函数"><a href="#虚函数与析构函数" class="headerlink" title="虚函数与析构函数"></a>虚函数与析构函数</h1><h2 id="析构函数"><a href="#析构函数" class="headerlink" title="析构函数"></a>析构函数</h2><p>当一个对象要离开它的作用域的时候，就要消亡，即释放自身的内存空间，此时就需要析构函数来释放和删除对象。</p>
+<p>系统会自动调用析构函数。</p>
+<p>如果用户没有编写析构函数的话，每一个类都会有一个默认的析构函数，即自定义了一个空的析构函数，不进行任何操作。</p>
+<p>如果该类中有指针，则需要在析构函数中添加释放指针的相关代码，以防止内存泄漏。</p>
+<p>不允许有参数表和返回类型。</p>
+<p>析构函数的执行顺序（与构造函数顺序相反）：派生类自身-&gt;对象成员的反顺序-&gt;基类。</p>
+<h2 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h2><p>为了实现基类指针在操控多态对象的时候能返回对象对应的函数，则在基类的函数中添加virtual关键字。这就是虚函数。</p>
+<p>虚函数创建时会额外添加一个虚函数表和虚表指针。虚函数表就相当于一个存储派生类里虚函数的地址的数组，派生类的虚函数表会继承基类的虚函数表，同时更新虚函数表里的函数地址，当每次基类指针调用派生类对象的虚函数的时候，会查找这个派生类对象的虚函数表来确认函数地址，这个数组就发挥了作用：用来查找派生类的虚函数地址。</p>
+<p>如以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class A</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">void print()</span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;&quot;This is A&quot;&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class B : public A</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">void print()</span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;&quot;This is B&quot;&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F;main2</span><br><span class="line">	A a;</span><br><span class="line">	B b;</span><br><span class="line">	A *p1 &#x3D; &amp;a;</span><br><span class="line">	A *p2 &#x3D; &amp;b;</span><br><span class="line">	p1-&gt;print();</span><br><span class="line">	p2-&gt;print();</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果是两个都是”This is A”。</p>
+<p>当基类的print函数加了virtual后，则是正确地显示”This is A”和”This is B”了。</p>
+<p>注意：在基类里是虚函数后，派生类的相关函数也跟着成为了虚函数，不管自己是否在派生类中添加virtual，当然为了代码规范，建议添加。</p>
+<p>静态函数在程序刚刚运行时就创建好了空间，而虚函数在运行的时候才被动态绑定。</p>
+<h2 id="父类的析构函数必须是虚函数"><a href="#父类的析构函数必须是虚函数" class="headerlink" title="父类的析构函数必须是虚函数"></a>父类的析构函数必须是虚函数</h2><p>因为为了保证基类指针指向派生类对象时，如果超出作用域，派生类对象的析构函数能被使用，派生类对象能被正确地销毁释放，以防止内存泄漏。</p>
+<h2 id="析构函数默认都不是虚函数"><a href="#析构函数默认都不是虚函数" class="headerlink" title="析构函数默认都不是虚函数"></a>析构函数默认都不是虚函数</h2><p>虚函数在创建的时候默认会添加虚函数表和虚表指针，这些都是占用内存的。有些场景下，比如此类不会成为其它类的基类，那么就不需要析构函数成为虚函数，所以为了不浪费内存，析构函数就没有必要成为虚函数了。只有当此类成为其他类的基类的时候，才有必要将此析构函数变成虚函数。</p>
+<h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><p>多态分为静态多态和动态多态。</p>
+<p>函数重载和运算符重载都属于静态多态，由于参数列表不同的函数调用，相同函数名/相同操作符实现不同效果的特点称为多态。静态多态编译阶段就确定了函数地址，称为早绑定。</p>
+<p>动态多态即以派生类与虚函数实现的多态，是运行阶段才能够绑定函数地址的形式，称为晚绑定。</p>
+<p>（动态）多态实现条件：有继承关系+虚函数。</p>
+<h1 id="fork-wait-exec"><a href="#fork-wait-exec" class="headerlink" title="fork\wait\exec"></a>fork\wait\exec</h1><h2 id="fork"><a href="#fork" class="headerlink" title="fork"></a>fork</h2><p>fork本身代表着复刻、派生的意思。fork函数意味着创建一个新进程（称作子进程），相当于是父进程的副本。</p>
+<p>fork函数具有返回值。父进程会返回子进程的进程id，子进程会返回0。如果中间有错误，则会返回负数。（可以把过程想象作链表，父进程指向子进程，子进程为最后一个进程，所以返回0）。但这里要注意的是，两个进程的调度实际上没有固定的先后顺序。</p>
+<p>特点就是调用一次，返回两次。</p>
+<h2 id="wait"><a href="#wait" class="headerlink" title="wait"></a>wait</h2><p>用来让一个进程等待另一个进程（通常是父进程等待子进程），或者是父进程要回收子进程资源的时候使用的函数。调用了函数后的父进程立刻阻塞自己，并且等待一个子进程退出。如果子进程正常退出，那么wait会将这个子进程销毁并返回；如果一直没有出现子进程退出的情况，则一直等待。</p>
+<p>如果在fork之前就使用了wait，那么将导致没有子进程可以等待，wait返回-1。</p>
+<h2 id="exec"><a href="#exec" class="headerlink" title="exec"></a>exec</h2><p>将当前进程替换为一个新进程，并且前后的进程ID是相同的。</p>
+<p>fork函数是复制一个新进程，但是我们希望子进程的工作和父进程不一样，所以可以利用exec函数来将这个子进程替换成另一个新的子进程，并且可以指定新的子进程根据文件名或目录名找到可执行文件来取代原进程的代码段。也就是除了进程ID没变以外，其它（尤其是执行文件）都变了。</p>
+<h1 id="重载、重写（覆盖）与隐藏"><a href="#重载、重写（覆盖）与隐藏" class="headerlink" title="重载、重写（覆盖）与隐藏"></a>重载、重写（覆盖）与隐藏</h1><p>重载：两个函数名相同的函数，其参数个数、参数类型或者顺序不同时，可以被编译器当作两个不同的函数来使用（与返回值无关）。仅返回值不同的两函数会报错。</p>
+<p>重写（覆盖）：基类与派生类之间，形式完全一致（函数名，返回值类型，参数列表）的函数，且基类有virtual作为修饰。此时派生类的操作称为重写。</p>
+<p>隐藏：基类与派生类之间，派生类屏蔽了基类的同名函数，称为隐藏（只需同名即可）。</p>
+<h1 id="strcpy和strlen"><a href="#strcpy和strlen" class="headerlink" title="strcpy和strlen"></a>strcpy和strlen</h1><p>strcpy是字符串复制函数，把含有’/0‘的字符串拷贝到一个新的地址空间中，返回值类型是char <em>，即 char * strcpy（char</em> dest，char* src），将src逐字节拷贝到dest中。由于strcpy没有数组边界检查，所以可能会造成缓冲区溢出的漏洞，可以使用strncpy；</p>
+<p>strlen是计算字符串长度的函数。</p>
+<h1 id="C-函数栈空间"><a href="#C-函数栈空间" class="headerlink" title="C++函数栈空间"></a>C++函数栈空间</h1><p>最大值默认1M，可调整。</p>
+<h2 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h2><p>每一个函数在被调用的时候都会分配一个栈空间，首先将返回地址压入栈中，然后将参数列表里的各个参数按照从右向左的顺序依次压栈，然后跳转到函数体中去执行函数。</p>
+<h2 id="函数返回值"><a href="#函数返回值" class="headerlink" title="函数返回值"></a>函数返回值</h2><p>函数返回值有值类型和引用类型。</p>
+<p>对于值类型，C++会用一个临时对象存储返回值，然后再将这个临时对象赋值给另一个变量，即这个临时对象成为了右值。</p>
+<p>对于引用类型，C++直接用返回的那个数值作为赋值对象，不需要另外创建一个临时对象，即这个返回值成为了左值。</p>
+<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><p>STL能够更方便灵活地处理数据。</p>
+<p>set和map属于关联容器，其它大多数都属于顺序容器。</p>
+<p>顺序容器只有一个实际的值val，而关联容器则需要键值对。</p>
+<p>顺序容器不涉及排序，而关联容器自动排序。</p>
+<p>顺序容器根据元素在容器中的位置进行访问，而关联容器则根据键来访问元素。</p>
+<h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><p>STL由容器、算法、迭代器、容器适配器、函数对象与其它STL组件组成。</p>
+<p>容器：数据存储的方法。数据怎样存储的，由装它们的容器决定。</p>
+<p>算法：容器处理这些数据的功能。</p>
+<p>迭代器：指向容器内元素的类似于指针的类模板。</p>
+<h2 id="迭代器的存在"><a href="#迭代器的存在" class="headerlink" title="迭代器的存在"></a>迭代器的存在</h2><p>迭代器是为了让容器更好地遍历元素。</p>
+<p>如果没有迭代器，那么对于不同的容器而言，比如list和vector，要设置成不同的算法来遍历元素，这是与stl存在即为了更好地管理元素的原则是违背的。</p>
+<p>有了迭代器之后，就可以将算法和容器分离开来，使算法更具有通用性。</p>
+<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>一种向量类型（动态数组）。</p>
+<p>访问特定位置的元素为O(1)。删除最后的元素为O(1)，删除中间的元素O(n)。添加元素到末尾也是O(1)。通常是在最后添加元素。</p>
+<p>删除元素是通过erase函数来实现的，返回这个元素的下一个元素的迭代器。</p>
+<p>在中间节点进行插入或者删除的时候，都会涉及到拷贝和复制。</p>
+<p>vector具有一段连续的存储空间。适用于快速访问的环境。</p>
+<p>如果添加的元素大于之前申请的最大元素存储量，那么会开辟一个新的空间是前一个空间的1.5倍或者2倍或者其它倍数（编译器决定），然后再拷贝原来的元素到新空间里。</p>
+<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><p>list本质上是一种双向链表，也是一个顺序容器。拥有独特的删除元素功能：remove(a)(删除所有与a相同的元素)。</p>
+<p>访问特定位置的元素需要O(n)的时间复杂度，删除特定的元素和添加则只需要O(1)。</p>
+<p>除了erase函数可以用于删除外，还可以使用remove来删除特定元素。</p>
+<p>list的存储空间是离散的。适用于快速插入和删除的环境。</p>
+<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p>set和map都是由红黑树（相对接近平衡的二叉搜索树）底层原理实现的。</p>
+<p>由于红黑树的特性，set里的元素都是被排序好的，且都是唯一的。</p>
+<p>可以通过find函数来查询set中是否存在某一个元素。</p>
+<p>为了保证红黑树的稳定性，set的元素不能被改变。</p>
+<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p>set和map都是由红黑树（相对接近平衡的二叉搜索树）底层原理实现的。</p>
+<p>可以建立一对键值对存储在map中。</p>
+<p>可以通过find函数来查询map中是否存在某一个键。</p>
+<p>由于红黑树的特性，map里的元素都通过键排序好了。</p>
+<p>键必须是唯一的。</p>
+<p>因为为了保证红黑树的稳定性，map的键不能改动，如果改动了将对红黑树的特性造成很大的破坏，但是键所对应的值可以改动。</p>
+<h2 id="unordered-map"><a href="#unordered-map" class="headerlink" title="unordered_map"></a>unordered_map</h2><p>与map不同的是，unordered_map的底层实现是哈希表，同时内部元素的顺序是无序的。</p>
+<h2 id="multimap"><a href="#multimap" class="headerlink" title="multimap"></a>multimap</h2><p>与map不同的是，key可以重复，即key对应的value值可以有多个。两者的底层实现都是红黑树。</p>
+<h2 id="allocator"><a href="#allocator" class="headerlink" title="allocator"></a>allocator</h2><p>在一定程度上将分配空间和初始化进行分离。</p>
+<p>一个很明显的例子就是，new关键字在使用的时候是把一个对象的分配空间和它的初始化一并完成了，delete也是同理。为了能够把这两个操作进行分离，就有了这个容器。</p>
+<p>可以这样理解，相当于是一种vector，只不过里面没有任何数据，可以设定这个容器的大小，然后编译器就会开辟相应的空间（allocate（n）函数），但是不会提前放入数据，只有当自己人为地往里面添加数据的时候，才会进行初始化操作。这就实现了分配空间和初始化的分离。同样的，在销毁（destroy（p）函数）的过程中，需要逐个删除p指向的对象。</p>
+<h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2><p>容器一般可以使用erase来删除元素。通过将指向需要删除的迭代器作为参数传入函数中，返回的是被删除元素的下一个位置。</p>
+<p>这里需要注意的是，删除元素后的迭代器是无效的，也就是这个迭代器就无法使用了，但是由于能够返回被删除元素的下一个位置，所以可以重新赋值，也就是可以通过iter = v.erase(iter)来达到删除元素并指向下一个元素的效果。</p>
+<p>但是对于底层结构是红黑树的set和map而言，erase的返回类型是void，迭代器彻底失效，能做的就是在删除前记录下一个元素的位置即可（内部是自动排序好的）。</p>
+<p>对于list而言，可以使用它本身的remove函数。当然在使用erase的时候，会和其它容器一样，原有的迭代器失效，需要重新赋值。</p>
+<h2 id="reserve和resize"><a href="#reserve和resize" class="headerlink" title="reserve和resize"></a>reserve和resize</h2><p>resize修改了当前容器的最大存储容量和现存储容量。即原来的600ml容量，500ml净含量的矿泉水被升级成了700ml容量和700ml净含量的矿泉水。</p>
+<p>reserve修改了当前容器的最大存储容量。相当于是之前的600ml容量，500ml净含量的矿泉水被扩大了容量，为1000ml，但净含量还是500ml。</p>
+<h2 id="STL内存优化"><a href="#STL内存优化" class="headerlink" title="STL内存优化"></a>STL内存优化</h2><p>STL内存管理采用的是二层配置器结构。</p>
+<p>第一级配置器是用malloc\remalloc\free等函数执行的内存配置与释放等操作，分配的是大于128字节的空间，如果空间分配失败，则调用句柄释放一部分内存，如果依然失败，则抛出异常。</p>
+<p>第二级配置器基于第一级配置器新添了一些机制。如果申请的内存大于128字节，那么会调用第一级配置器进行处理；如果小于128字节，那么会维护一个16个结点的空闲链表，此后分配的内存从链表中取，如果有盈余，则返回到链表中，如果内存不够申请的内存，则调用refill函数（一般再取20个数据块）从内存池中取出数据块填充空间，若剩下的空间无法供应，那么抛出异常。</p>
+<p><img src="/2021/03/03/C++/7.png" alt></p>
+<p>用户调用deallocate释放空间时，大于128字节的空间会直接释放，小于128k字节的空间会返回到空闲链表中。</p>
+<h1 id="C-11"><a href="#C-11" class="headerlink" title="C++11"></a>C++11</h1><p>C++11添加了一些新特性，比如</p>
+<p>智能指针（弃用了auto_ptr,添加了shared_ptr、weak_ptr等智能指针）</p>
+<p>auto关键字(编译器根据初始值自动推导出类型)。</p>
+<p>nullptr关键字</p>
+<p>右值引用(可以绑定一个即将被释放的对象，消除不必要的拷贝操作，提高效率)。</p>
+<p>初始化列表(可以根据初始化列表进行类的初始化)。</p>
+<p>新的STL容器:array+tuple。</p>
+<p>添加了可变参数模板(在模板里能表示0-n个参数)这一个功能。</p>
+<h2 id="可变参数模板"><a href="#可变参数模板" class="headerlink" title="可变参数模板"></a>可变参数模板</h2><p>可变参数模板是C++11的一项新的强大功能，可以使模板的参数数目变成0-n的不固定值，并且其中参数的类型也可以不一致，实现了高度泛化。</p>
+<p>格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Template&lt;class ... T&gt;</span><br><span class="line">void func(T ... args)</span><br><span class="line">&#123;</span><br><span class="line">cout&lt;&lt;”num is”&lt;&lt;sizeof ...(args)&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>省略号的意义在于：声明一个包含0个到多个的参数的参数包；在模板定义的右边可以把参数包展开成一个个独立的参数。</p>
+<p>可以利用一个递归的print函数来展开参数包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">template void print(T head, Args... args)</span><br><span class="line">&#123;</span><br><span class="line">cout &lt;&lt; head &lt;&lt; &quot;,&quot;; print(args...);</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">print(1, 2, 3, 4); return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>没调用一次自身，参数列表就会少一个参数，从而实现遍历。最后一个函数为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void print()</span><br><span class="line">&#123;</span><br><span class="line">	cout &lt;&lt; &quot;empty&quot; &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="C-源文件从文本到可执行文件经历的过程"><a href="#C-源文件从文本到可执行文件经历的过程" class="headerlink" title="C++源文件从文本到可执行文件经历的过程"></a>C++源文件从文本到可执行文件经历的过程</h1><h2 id="1-预处理阶段"><a href="#1-预处理阶段" class="headerlink" title="1.预处理阶段"></a>1.预处理阶段</h2><p>将所有的宏定义和包含关系进行分析和替换，生成预编译文件。</p>
+<h2 id="2-编译阶段"><a href="#2-编译阶段" class="headerlink" title="2.编译阶段"></a>2.编译阶段</h2><p>将预编译文件转换成特定的汇编代码，形成汇编文件。</p>
+<p>主要的活动：词法分析，语法分析，语义分析和目标代码生成。</p>
+<h2 id="3-汇编阶段"><a href="#3-汇编阶段" class="headerlink" title="3.汇编阶段"></a>3.汇编阶段</h2><p>将汇编文件转换成全都是机器码的可重定位的目标文件。</p>
+<h2 id="4-链接阶段"><a href="#4-链接阶段" class="headerlink" title="4.链接阶段"></a>4.链接阶段</h2><p>将所有文件连接成最终的目标文件。</p>
+<p>分为静态链接和动态链接：</p>
+<p>静态链接在编译的时候就通过复制库中的函数和其他数据等操作处理好了链接，这样会有大量的数据冗余，一个文件存在多个副本。</p>
+<p>动态链接是把程序分为多个模块，在运行的时候连接这些模块。这样就可以使用共享库，即多个模块用到的库都可以使用同一个副本。</p>
+<h1 id="虚拟内存分布"><a href="#虚拟内存分布" class="headerlink" title="虚拟内存分布"></a>虚拟内存分布</h1><p>C++的虚拟内存主要是五大板块：</p>
+<p>代码段：存储程序可执行代码的内存区域。</p>
+<p>数据段：存储已经被初始化的全局变量和静态变量。</p>
+<p>bss段：存储没有初始化的全局变量和静态变量，以及被初始化为0的全局变量和静态变量。</p>
+<p>堆：利用malloc/new来自由分配的动态分配空间。</p>
+<p>（堆和栈中间可以添加一个mmp函数调用的自由存储分配空间，用来存储文件映射的区域，也就是映射区）。</p>
+<p>栈：存放临时创建的局部变量的内存空间。函数被调用时也会用到函数栈之类的空间也在这里产生。</p>
+<p><img src="/2021/03/03/C++/image-20210303093833374.png" alt="image-20210303093833374"></p>
+<h1 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h1><p>指的是一段被分配的空间（一般指堆式存储空间内，程序员动态分配的内存）并没有得到释放，导致系统内存浪费，最终可能会导致系统运行崩溃。</p>
+<p>很典型的例子：在链表和树型结构中，一个结点在成为孤立结点的时候就应该被删除销毁，否则就会造成内存泄漏。这就是普通指针存在的问题，从而引出了智能指针的必要性。</p>
+<p>另一个例子：如果基类的析构函数不是虚函数的话，会导致基类指针指向衍生类对象的时候，在执行析构函数时没有完全销毁内存，从而导致内存泄漏。</p>
+<p>我们可以通过引用计数的方式来计数申请的内存和销毁的内存是否一致，来进行检测。</p>
+<h1 id="段错误"><a href="#段错误" class="headerlink" title="段错误"></a>段错误</h1><p>如果指针访问的内存超过了系统所给的内存空间，那么就会发生段错误。</p>
+<p>通常场景：使用野指针；数组越界访问；直接访问被系统保护的内存空间（比如修改字符串常量）等。</p>
 
       
 
@@ -267,7 +565,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/14/SQL%20in%20flask/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/03/03/C++/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -281,18 +579,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/11/28/SQLClass/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          SQL程序设计
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/09/29/DeepLearning2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">深度学习学习笔记2</div>
+    <a href="/2020/11/28/SQLClass/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SQL程序设计</div>
       <i class="icon-circle-right"></i>
     </a>
   
